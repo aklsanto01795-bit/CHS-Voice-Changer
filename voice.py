@@ -23,7 +23,7 @@ from telegram.ext import (
 # CONFIG
 # =========================================================
 
-BOT_TOKEN = "8922085167:AAHxOUSxEehV2AlODmAQebbVdzlUPR33_hc"
+BOT_TOKEN = "8922085167:AAHxXFvms5gporJOhSUbvWJg02nwOrW-X2A"
 
 ADMIN_ID = 8889726455
 
@@ -590,43 +590,37 @@ async def receive_voice(
         context.user_data["voice_file"] = input_file
 
         keyboard = [
-    [
-        InlineKeyboardButton(
-            "🤖 Robot",
-            callback_data="effect_robot",
-            style="primary"
-        ),
-        InlineKeyboardButton(
-            "👽 Alien",
-            callback_data="effect_alien",
-            style="primary"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            "💻 Chipmunk",
-            callback_data="effect_hacker",
-            style="danger"
-        ),
-        InlineKeyboardButton(
-            "🧟 Deep Voice",
-            callback_data="effect_deep",
-            style="danger"
-        )
-    ],
-    [
-        InlineKeyboardButton(
-            "⚡ Hacker",
-            callback_data="effect_chipmunk",
-            style="success"
-        ),
-        InlineKeyboardButton(
-            "🌌 Echo",
-            callback_data="effect_echo",
-            style="success"
-        )
-    ]
-]
+            [
+                InlineKeyboardButton(
+                    "🤖 Robot",
+                    callback_data="effect_robot"
+                ),
+                InlineKeyboardButton(
+                    "👽 Alien",
+                    callback_data="effect_alien"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    "⚡ Hacker",
+                    callback_data="effect_chipmunk"
+                ),
+                InlineKeyboardButton(
+                    "🧟 Deep Voice",
+                    callback_data="effect_deep"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    "💻 Chipmunk",
+                    callback_data="effect_hacker"
+                ),
+                InlineKeyboardButton(
+                    "🌌 Echo",
+                    callback_data="effect_echo"
+                )
+            ]
+        ]
 
         await processing.edit_text(
             "✅ <b>Voice Received!</b>\n\n"
